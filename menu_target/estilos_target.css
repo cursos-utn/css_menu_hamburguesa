@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin:0;
+    background: rgb(39, 39, 39);
+}
+#contenedor {
+    min-height: 90%;
+    padding: 1em;
+    background: white;
+}
+#elementos {
+    display: flex;
+}
+header {
+    padding: 1em;
+    height: 50px;
+    position: relative;
+    z-index: 2; /* Importante */
+}
+header a {
+    color: white;
+}
+
+#menu ul {
+    margin:0;
+    padding:0;
+}
+#menu li {
+    list-style: none;
+    margin: 1em 0;
+    text-align: center;
+}
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    padding: 10px 50px;
+    color: white;
+}
+footer p {
+    margin:0;
+}
+
+#menu {
+    background: rgb(39, 39, 39);
+    position: relative;
+    top: -50px; /* Para que quede sobre el menu hamburguesa */
+
+    width: 0; /* Transicion */
+    opacity: 0; /* Transicion */
+    transition: width 0.5s, opacity 0.8s;
+}
+#menu i {
+    padding: 1em;
+}
+
+#menu:target {
+    width: 200px; /* Transicion */
+    opacity: 1;   /* Transicion */
+    z-index: 3;  /* Ponerlo sobre el header */
+}

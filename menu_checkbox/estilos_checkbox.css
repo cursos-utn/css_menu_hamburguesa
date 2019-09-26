@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin:0;
+    background: rgb(39, 39, 39);
+}
+#contenedor {
+    min-height: 90%;
+    padding: 1em;
+    background: white;
+}
+#elementos {
+    display: flex;
+}
+header {
+    padding: 1em;
+    height: 50px;
+    position: relative;
+    z-index: 2; /* Importante */
+}
+header a {
+    color: white;
+}
+
+
+
+
+footer {
+    padding: 10px 50px;
+    color: white;
+}
+footer p {
+    margin:0;
+}
+header label {
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    width: 0;
+    transform: translate(-200px) rotateX(90deg);
+    padding: 0;
+    margin: 0;
+    transition: width 0.5s, transform 0.8s;
+
+    background: rgb(39, 39, 39);
+}
+nav ul {
+    margin:0;
+    padding:0;
+}
+nav li {
+    list-style: none;
+    margin: 1em 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu_check {
+    display: none;
+}
+/* Se activa cuando el checkbox esta clickeado */
+#menu_check:checked ~ nav {
+
+    width: 200px;
+    transform: translate(0);
+}
